@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudula Senior Secondary High School</title>
+
+    <link rel="canonical" href="https://mudu.edu.et/">
+    <meta name="description" content="Official website of Mudula Senior Secondary High School. Quality education, student registration, exam results, and updates.">
+    <meta name="author" content="Getahun Amanuel">
+
+    <meta property="og:title" content="Mudula Senior Secondary High School">
+    <meta property="og:description" content="Empowering students for a better future. Access registration, exam results, and school updates.">
+    <meta property="og:url" content="https://mudu.edu.et/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .topbar {
+            background: #063c2e;
+            color: white;
+            padding: 9px 0;
+            font-size: 14px;
+        }
+
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #40087f;
+            color: rgb(255, 255, 255);
+            border: 4px solid #f2b632;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo h2 {
+            color: #7f0808;
+            font-size: 20px;
+        }
+
+        .logo p {
+            color: #777777;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .nav nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav nav a {
+            color: #222;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav nav a:hover {
+            color: #427f08;
+        }
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(65, 3, 3, 0.88), rgba(3, 65, 57, 0.88));
+            color: white;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero-label {
+            color: #f23292;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.15;
+            max-width: 800px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #f2b632;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 19px;
+            color: #e7eeee;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #f2b632;
+            color: #222222;
+        }
+
+        .btn-primary:hover {
+            background: #d99d18;
+        }
+
+        .btn-outline {
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #087f6b;
+        }
+
+        .quick {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .quick-card {
+            padding: 30px 20px;
+            text-align: center;
+            border-right: 1px solid #eee;
+        }
+
+        .quick-card:last-child {
+            border-right: none;
+        }
+
+        .quick-icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .quick-card h3 {
+            color: #063c35;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .quick-card p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title .label {
+            color: #087f6b;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: #172b2a;
+            margin-top: 8px;
+        }
+
+        .section-title h2 span {
+            color: #3c087f;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 15px auto;
+            color: #777;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .school-box {
+            height: 420px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #087f6b, #063c35);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .school-box .building {
+            font-size: 100px;
+            margin-bottom: 20px;
+        }
+
+        .school-box h2 {
+            font-size: 25px;
+        }
+
+        .school-box p {
+            color: #d9eeee;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            color: #172b2a;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: #666;
+        }
+
+        .about-text li {
+            margin: 12px 0;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .about-text li::before {
+            content: "✓";
+            color: #087f6b;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .statistics {
+            background: #087f6b;
+            color: white;
+            padding: 55px 0;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .stat {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat h2 {
+            color: #f2b632;
+            font-size: 40px;
+        }
+
+        .stat p {
+            color: #e0eeee;
+        }
+
+        .light {
+            background: #f6f9f8;
+        }
+
+        .academic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .academic-card {
+            background: white;
+            padding: 35px 28px;
+            border-radius: 10px;
+            border: 1px solid #e5e5e5;
+            transition: 0.3s;
+        }
+
+        .academic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .academic-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 10px;
+            background: #e8f5f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .academic-card h3 {
+            color: #063c35;
+            margin-bottom: 12px;
+        }
+
+        .academic-card p {
+            color: #777;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e5e5e5;
+            display: flex;
+            transition: 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-date {
+            background: #087f6b;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 80px;
+        }
+
+        .news-date span {
+            font-size: 24px;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-content h3 {
+            color: #063c35;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .news-content p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .gallery-item {
+            height: 220px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #e8f5f2;
+            border: 2px dashed #087f6b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            background: #d8f0ec;
+            transform: scale(1.02);
+        }
+
+        .gallery-placeholder {
+            color: #063c35;
+            font-weight: bold;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .social-bar-section {
+            background: #f6f9f8;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .social-bar-section h3 {
+            color: #063c35;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .social-container {
+            display: inline-block;
+            background: #ffffff;
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-links a {
+            font-size: 24px;
+            color: #555;
+            text-decoration: none;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        .fa-telegram:hover { color: #0088cc; }
+        .fa-tiktok:hover { color: #000000; }
+        .fa-youtube:hover { color: #FF0000; }
+        .fa-facebook:hover { color: #1877F2; }
+        .fa-whatsapp:hover { color: #25D366; }
+        .fa-phone:hover { color: #517fa4; }
+
+        @media (max-width: 900px) {
+            .nav nav { gap: 15px; }
+            .hero h1 { font-size: 48px; }
+            .quick-grid { grid-template-columns: repeat(2, 1fr); }
+            .academic-grid, .news-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 700px) {
+            .topbar .container { justify-content: center; text-align: center; }
+            .topbar .right { display: none; }
+            .nav { flex-direction: column; padding: 15px 0; gap: 15px; }
+            .nav nav { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .hero { min-height: 570px; text-align: center; }
+            .hero-content { display: flex; flex-direction: column; align-items: center; }
+            .hero h1 { font-size: 40px; }
+            .quick-grid, .about-grid, .academic-grid, .news-grid, .gallery-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <div>📍 Mudula, Ethiopia</div>
+            <div class="right">
+                ☎ +251 961546774 &nbsp;&nbsp; | &nbsp;&nbsp; ✉ info@mudu.edu.et
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container nav">
+            <div class="logo">
+                <div class="logo-icon">ML</div>
+                <div>
+                    <h2>Mudula</h2>
+                    <p>SENIOR SECONDARY HIGH SCHOOL</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#academics">Academics</a>
+                <a href="#results">Results</a>
+                <a href="#registration" style="color: #f2b632;">Register</a>
+                <a href="#news">News</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#social-media">Social</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-label">WELCOME TO MUDULA</div>
+            <h1>Empowering Students <span>For a Better Future</span></h1>
+            <p>Mudula Comprehensive High School is committed to providing quality education and developing responsible, knowledgeable and innovative citizens.</p>
+            <div>
+                <a href="#registration" class="btn btn-primary">Register Now</a>
+                <a href="#results" class="btn btn-outline">Check Results</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick">
+        <div class="container quick-grid">
+            <div class="quick-card">
+                <div class="quick-icon">🎓</div>
+                <h3>Quality Education</h3>
+                <p>Strong academic foundations for student success.</p>
+            </div>
+            <div class="quick-card">
+                <div class="quick-icon">👨‍🏫</div>
+                <h3>Qualified Teachers</h3>
+                <p>Dedicated educators supporting every learner.</p>
+            </div>
+            <div class="quick-card">
+                <div class="quick-icon">🔬</div>
+                <h3>Science &amp; Technology</h3>
+                <p>Practical learning and technological innovation.</p>
+            </div>
+            <div class="quick-card">
+                <div class="quick-icon">🌍</div>
+                <h3>Community</h3>
+                <p>Strong cooperation with parents and society.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <div class="label">ABOUT OUR SCHOOL</div>
+                <h2>Building a Better <span>Future</span></h2>
+                <p>Education is the foundation for individual growth and community development.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="school-box">
+                    <div class="building">🏫</div>
+                    <h2>Mudula Senior Secondary High School</h2>
+                    <p>Mudula, Ethiopia</p>
+                </div>
+
+                <div class="about-text">
+                    <h2>Welcome to Mudula</h2>
+                    <p>Mudula Senior Secondary High School is committed to providing quality education and creating a positive learning environment for students.</p>
+                    <p>Our school encourages students to develop academic knowledge, creativity, critical thinking, discipline and leadership skills.</p>
+                    <ul>
+                        <li>Quality and inclusive education</li>
+                        <li>Student-centered learning</li>
+                        <li>Science and technology development</li>
+                        <li>Discipline and responsibility</li>
+                        <li>Community participation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="statistics">
+        <div class="container stats">
+            <div class="stat">
+                <h2>1983</h2>
+                <p>Established</p>
+            </div>
+            <div class="stat">
+                <h2>2000+</h2>
+                <p>Students</p>
+            </div>
+            <div class="stat">
+                <h2>90+</h2>
+                <p>Teachers &amp; Staff</p>
+            </div>
+            <div class="stat">
+                <h2>35+</h2>
+                <p>Years of Service</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="academics" class="light">
+        <div class="container">
+            <div class="section-title">
+                <div class="label">ACADEMIC PROGRAMS</div>
+                <h2>Learning for <span>Tomorrow</span></h2>
+            </div>
+
+            <div class="academic-grid">
+                <div class="academic-card">
+                    <div class="academic-icon">🔬</div>
+                    <h3>Natural Science</h3>
+                    <p>Biology, Chemistry, Physics, Mathematics, English and practical scientific learning.</p>
+                </div>
+                <div class="academic-card">
+                    <div class="academic-icon">📐</div>
+                    <h3>Mathematics</h3>
+                    <p>Developing logical reasoning and problem-solving abilities.</p>
+                </div>
+                <div class="academic-card">
+                    <div class="academic-icon">📚</div>
+                    <h3>Languages</h3>
+                    <p>Developing communication, reading and writing skills.</p>
+                </div>
+                <div class="academic-card">
+                    <div class="academic-icon">💻</div>
+                    <h3>ICT &amp; Computing</h3>
+                    <p>Computer literacy and digital technology education.</p>
+                </div>
+                <div class="academic-card">
+                    <div class="academic-icon">🏛️</div>
+                    <h3>Social Science</h3>
+                    <p>History, Economics, English, Mathematics, Geography, Civics, and comprehensive humanities education.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Exam Result Portal Section -->
+    <section id="results" class="results-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="label">ACADEMIC RECORDS</div>
+                <h2>Check Exam <span>Results</span></h2>
+                <p>Enter your student ID or registration number to view your grade report and exam scores.</p>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; border: 1px solid #e5e5e5; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <form id="resultCheckForm" onsubmit="handleResultSearch(event)">
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #063c35;">Student ID / Registration Number</label>
+                        <input type="text" id="studentIdInput" required placeholder="e.g., MDU/2026/0123" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #063c35;">Academic Year &amp; Semester</label>
+                        <select id="examSemester" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; background: white;">
+                            <option value="">Select Semester</option>
+                            <option value="2018-sem2">2018 E.C. - 2nd Semester</option>
+                            <option value="2018-sem1">2018 E.C. - 1st Semester</option>
+                            <option value="2017-final">2017 E.C. - Final Exam</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer; font-size: 16px;">View Result</button>
+                </form>
+
+                <!-- Result Output Container (Hidden by default) -->
+                <div id="resultDisplayBox" style="display: none; margin-top: 30px; padding: 25px; background: #f6f9f8; border-radius: 8px; border: 1px solid #d0dedb;">
+                    <h3 style="color: #063c35; margin-bottom: 15px; border-bottom: 2px solid #087f6b; padding-bottom: 8px;">Student Score Report</h3>
+                    <div id="resultDetails" style="font-size: 15px; color: #444; line-height: 1.8;">
+                        <!-- Dynamically populated via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Registration Section -->
+    <section id="registration" class="registration light">
+        <div class="container">
+            <div class="section-title">
+                <div class="label">ONLINE SERVICES</div>
+                <h2>Student <span>Registration</span></h2>
+                <p>Fill out the form below to apply or register for the upcoming academic semester.</p>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; border: 1px solid #e5e5e5; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #063c35;">Full Name</label>
+                        <input type="text" name="fullname" required placeholder="Enter your full name" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #063c35;">Grade Level</label>
+                        <select name="grade" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; background: white;">
+                            <option value="">Select Grade</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11-natural">Grade 11 (Natural Science)</option>
+                            <option value="11-social">Grade 11 (Social Science)</option>
+                            <option value="12-natural">Grade 12 (Natural Science)</option>
+                            <option value="12-social">Grade 12 (Social Science)</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #063c35;">Phone Number</label>
+                        <input type="tel" name="phone" required placeholder="+251 ..." style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #063c35;">Email Address</label>
+                        <input type="email" name="email" placeholder="student@mudu.edu.et" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer; font-size: 16px;">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-title">
+                <div class="label">LATEST UPDATES</div>
+                <h2>School <span>News</span> &amp; Events</h2>
+                <p>Stay informed with the latest announcements, events, and achievements from our school community.</p>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">
+                        <span>16</span>Aug
+                    </div>
+                    <div class="news-content">
+                        <h3>Registration Opens</h3>
+                        <p>Registration for the new academic semester begins next week. All students are required to complete their clearances on time.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">
+                        <span>30</span>Jul
+                    </div>
+                    <div class="news-content">
+                        <h3>National and Grade Exam Results</h3>
+                        <p>We proudly celebrate our Grade 9-12 students for achieving exceptional scores on the examinations this year.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">
+                        <span>10</span>Aug
+                    </div>
+                    <div class="news-content">
+                        <h3>Science Laboratory Upgrade</h3>
+                        <p>Our physics and chemistry laboratories have been upgraded with new modern equipment to enhance practical learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery light">
+        <div class="container">
+            <div class="section-title">
+                <div class="label">PHOTO GALLERY</div>
+                <h2>Life at <span>Mudula</span></h2>
+                <p>A glimpse into our classrooms, campus life, sports, and extracurricular activities.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="https://images.unsplash.com/photo-1590579491624-f98f36d4c763?w=500&auto=format&fit=crop&q=60" alt="Main Campus">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?w=500&auto=format&fit=crop&q=60" alt="Science Laboratory">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="https://media.istockphoto.com/id/2245310152/photo/high-school-students-in-modern-computer-filled-classroom.webp?a=1&b=1&s=612x612&w=0&k=20&c=4-t4RxQg2Qm2kkvfPARTGUAIAooFzIsUB7jnk_q0JUU=" alt="ICT Center">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="https://media.istockphoto.com/id/2228740185/photo/football-drill-training-at-high-school-campus.webp?a=1&b=1&s=612x612&w=0&k=20&c=qAuiERoMsoUYgim2f5dInfaashT6cDzSid0QowhX3-g=" alt="Sports">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="https://plus.unsplash.com/premium_photo-1664300897489-fd98eee64faf?q=80&w=870&auto=format&fit=crop" alt="Library">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="https://images.unsplash.com/photo-1577985043696-8bd54d9f093f?w=500&auto=format&fit=crop&q=60" alt="Student Community">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="social-bar-section" id="social-media">
+        <h3>Connect With Us Online</h3>
+        <div class="social-container">
+            <div class="social-links">
+                <a href="https://t.me/GetahunAmanuel" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://tiktok.com/@GetahunAmanuel1212" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://youtube.com/@GetahunAmanuel" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://facebook.com/GetahunAmanuel" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://wa.me/251961546774" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="tel:+251961546774" target="_blank" title="Phone"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Developer Attribution Footer -->
+    <footer style="background: #04251d; color: #b2c9c5; padding: 40px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <p style="margin-bottom: 10px; font-size: 15px; color: #ffffff;">Mudula Senior Secondary High School &copy; 2026. All Rights Reserved.</p>
+            <p style="font-size: 14px; letter-spacing: 0.5px;">
+                Website &amp; Registration System Designed &amp; Developed by 
+                <span style="color: #f2b632; font-weight: bold;">Getahun Amanuel</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Handler for Results Check -->
+    <script>
+        function handleResultSearch(event) {
+            event.preventDefault();
+            const studentId = document.getElementById('studentIdInput').value.trim();
+            const semester = document.getElementById('examSemester').value;
+            const resultBox = document.getElementById('resultDisplayBox');
+            const detailsContainer = document.getElementById('resultDetails');
+
+            resultBox.style.display = 'block';
+            
+            detailsContainer.innerHTML = `
+                <p><strong>Student ID:</strong> ${studentId}</p>
+                <p><strong>Full Name:</strong> Getahun Amanuel</p>
+                <p><strong>Grade &amp; Stream:</strong> Grade 11 Natural Science</p>
+                <p><strong>Status:</strong> <span style="color: #087f6b; font-weight: bold;">Passed (Promoted)</span></p>
+                <table style="width: 100%; margin-top: 15px; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="background: #063c35; color: white;">
+                            <th style="padding: 8px; border: 1px solid #ccc;">Subject</th>
+                            <th style="padding: 8px; border: 1px solid #ccc;">Score (100%)</th>
+                            <th style="padding: 8px; border: 1px solid #ccc;">Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 8px; border: 1px solid #ccc;">Mathematics</td><td style="padding: 8px; border: 1px solid #ccc;">92</td><td style="padding: 8px; border: 1px solid #ccc;">A</td></tr>
+                        <tr><td style="padding: 8px; border: 1px solid #ccc;">Physics</td><td style="padding: 8px; border: 1px solid #ccc;">88</td><td style="padding: 8px; border: 1px solid #ccc;">A</td></tr>
+                        <tr><td style="padding: 8px; border: 1px solid #ccc;">Chemistry</td><td style="padding: 8px; border: 1px solid #ccc;">85</td><td style="padding: 8px; border: 1px solid #ccc;">B+</td></tr>
+                        <tr><td style="padding: 8px; border: 1px solid #ccc;">Biology</td><td style="padding: 8px; border: 1px solid #ccc;">90</td><td style="padding: 8px; border: 1px solid #ccc;">A</td></tr>
+                        <tr><td style="padding: 8px; border: 1px solid #ccc;">English</td><td style="padding: 8px; border: 1px solid #ccc;">86</td><td style="padding: 8px; border: 1px solid #ccc;">B+</td></tr>
+                    </tbody>
+                </table>
+            `;
+        }
+    </script>
+
+</body>
+
+</html>
